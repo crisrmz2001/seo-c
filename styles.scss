@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.nav-bar a {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.carousel-inner {
+  max-height: 39rem;
+}
+
+main .container {
+  height: 80vh;
+  background-image: url(./multimedia/bike1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+
+main .container .info {
+  grid-column: 7/10;
+  grid-row: 3/7;
+  color: #fff;
+}
+
+main .container .info h2 {
+  font-size: 5em;
+  color: white;
+}
+
+.container2 {
+  height: 80vh;
+  background-image: url(./multimedia/bike2.webp);
+  background-attachment: fixed;
+  background-size: cover;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+
+main .container2 .info2 {
+  grid-column: 5/3;
+  grid-row: 3/7;
+  color: rgb(230, 52, 52);
+}
+
+main .container2 .info2 h2 {
+  font-size: 5em;
+  color: rgb(230, 52, 52);
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  padding: 25px;
+  grid-gap: 15px;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-item:nth-child(4) {
+  grid-column-start: span 3;
+}
+
+/*------------------------------Contacto------------------------------*/
+.body {
+  background-color: #181818;
+  color: rgb(255, 255, 255);
+  font-family: "Anton", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 0.1 0.5em;
+}
+
+.content {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em;
+}
+
+.logo {
+  text-align: center;
+  font-size: 3em;
+}
+
+.logo span {
+  color: #b70e21;
+}
+
+.contacto {
+  box-shadow: 0 0 20px 0 rgb(15, 100, 175);
+}
+
+.contacto>* {
+  padding: 1em;
+}
+
+.contacto-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contacto-form form .bloque {
+  grid-column: 1 / 3;
+}
+
+.contacto-form form p {
+  margin: 0;
+  padding: 1em;
+}
+
+.contacto-form form button {
+  background: #b70e21;
+  color: #ffffff;
+  border: 0;
+  text-transform: capitalize;
+  padding: 1em;
+}
+
+.contacto-form {
+  background: #2b2a2a;
+}
+
+.contacto-info {
+  background: #2b2a2a;
+}
+
+.contacto-form form button,
+.contacto-form form input,
+.contacto-form form textarea {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  outline: 0;
+  color: #ffffff;
+  border-bottom: 1px solid #b70e21;
+}
+
+.contacto-form form button:hover,
+.contacto-form button:focus {
+  background: #d66035;
+  color: #fff;
+  transition: background-color 1s ease-out;
+  outline: 0;
+}
+
+.contacto-info h4,
+.contacto-info ul,
+.contacto-info iframe {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.contacto-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contacto-info ul li {
+  padding: 0.3em;
+}
+
+.iframe {
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 0 0 20px 0 #b70e21;
+}
+
+.subir {
+  height: 35px;
+  width: 35px;
+  font-size: 30px;
+  line-height: 32px;
+  color: rgb(63, 134, 240);
+  text-align: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  main .container .info {
+    grid-column: 2/10;
+    grid-row: 4/8;
+  }
+
+  main .container h2 {
+    font-size: 3.5em;
+  }
+
+  main .container2 .info2 {
+    grid-column: 2/10;
+    grid-row: 4/8;
+  }
+
+  main .container2 h2 {
+    font-size: 3.5em;
+  }
+}
+
+@media (min-width: 768px) {
+  .body {
+    padding: 0 4rem;
+  }
+
+  .contacto {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .contacto>* {
+    padding: 0.7em;
+  }
+
+  .contacto-info h4,
+  .contacto-info ul,
+  .contacto-form .iframe {
+    padding: 0.7em;
+    text-align: center;
+  }
+}
